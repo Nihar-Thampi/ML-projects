@@ -1,0 +1,23 @@
+<!DOCTYPE html> 
+<html> 
+    <head> 
+        <title>Animal Classification Prediction</title>
+        <link rel="stylesheet" type="text/css" href="static\css\style.css">
+    </head> 
+    <body>
+        <header class="top-left-header">
+            <h1>Jungle Detectives, Prediction Page</h1>
+        </header>
+        <a href="/home" class="top-left-link"> Home</a>
+        <a href="/" class="top-right-link">Index</a>
+        <div class="center-predict-container">
+            <p class="center-predict-text">
+                <p><h4>Upload an Image to Predict</h4></p> 
+                <p><form action="{{ url_for('prediction') }}" method="post" enctype="multipart/form-data"> 
+                    <input type="file" name="file" accept="image/*"> 
+                    <input type="submit" value="Predict"> 
+                </form>
+            </p></p>
+        </div>
+    </body> 
+</html>

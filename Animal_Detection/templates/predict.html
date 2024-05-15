@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Animal Classification Prediction</title>
+    <link rel="stylesheet" type="text/css" href="static\css\style.css">
+</head>
+
+<body> 
+    <header class="top-left-header">
+        <h1>Jungle Detectives, Prediction Page</h1>
+    </header>
+    <a href="/home" class="top-left-link"> Home</a>
+    <a href="/" class="top-right-link">Index</a> 
+    <div class="center-final-predict-container">
+        <p class="center-final-predict-text">
+            <h4>Press the predict button to predict again</h4>
+            <form action="{{ url_for('prediction') }}" method="post" enctype="multipart/form-data">
+                <input type="file" name="my_image">
+                <input type="submit" value="Predict">
+            </form>
+            {% if prediction %}
+            <h2>Prediction: {{ prediction }}</h2>
+            <img class="result-img">
+            {% endif %}
+        </p>
+    </div>
+</body>
+
+</html>
