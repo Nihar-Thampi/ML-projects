@@ -1,0 +1,8 @@
+pip install 
+pip install RPi.GPIO
+pip install dbus
+pip install requests
+pip install smbus
+pip install argparse
+pip install numpy
+pip install gobject
